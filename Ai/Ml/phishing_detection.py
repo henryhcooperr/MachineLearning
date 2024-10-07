@@ -20,7 +20,10 @@ parser.add_argument('--plot', action='store_true', help='Plot the training and v
 args = parser.parse_args()
 
 # Check if the model exists
-model_path = 'phishing_model.h5'
+script_dir = os.path.dirname(os.path.realpath(__file__))
+model_path = os.path.join(script_dir, 'phishing_model.h5')
+
+# Check if the model exists
 model_exists = os.path.exists(model_path)
 
 # Load the model if it exists
@@ -29,6 +32,7 @@ if model_exists:
     print("Loaded saved model.")
 else:
     # Train the model if requested or if no existing model is found
+    print("model doesnt exist")
     if args.train or not model_exists:
         # Load your dataset into a DataFrame
         df = pd.read_csv('out.csv')
