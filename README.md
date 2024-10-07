@@ -1,2 +1,2 @@
 # MachineLearning
-a directory to put all of my machine learning exploratory analysis / projects / experiements
+a directory to put some of my machine learning exploratory analysis / projects / experiements 
